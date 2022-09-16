@@ -1,5 +1,5 @@
 ﻿@page
-@model RazorPagesMovie.Models.Movie
+@model RazorPagesMovie.Pages.CreateModel
 @{
     ViewData["Title"] = "Create";
 }
@@ -10,20 +10,20 @@
 
 <form method="post">
     <div class="form-group">
-        <label asp-for="Title"></label>
-        <input asp-for="Title" class="form-control" id="movie_Title" placeholder="Enter Movie Title">
+        <label asp-for="@Model.Movie.Title"></label>
+        <input asp-for="@Model.Movie.Title" class="form-control" id="movie_Title" placeholder="Enter Movie Title">
     </div>
     <div class="form-group">
-        <label asp-for="Genre"></label>
-        <input asp-for="Genre" class="form-control" placeholder="Enter Movie Genre">
+        <label asp-for="@Model.Movie.Genre"></label>
+        <input asp-for="@Model.Movie.Genre" class="form-control" placeholder="Enter Movie Genre">
     </div>
     <div class="form-group">
-        <label asp-for="Price">Price</label>
-        <input asp-for="Price" type="number" class="form-control" placeholder="Enter Movie Price">
+        <label asp-for="@Model.Movie.Price">Price</label>
+        <input asp-for="@Model.Movie.Price" type="number" class="form-control" placeholder="Enter Movie Price">
     </div>
     <div class="form-group">
-        <label asp-for="ReleaseDate"></label>
-        <input asp-for="ReleaseDate" class="form-control" placeholder="Enter Movie Release Date">
+        <label asp-for="@Model.Movie.ReleaseDate"></label>
+        <input asp-for="@Model.Movie.ReleaseDate" class="form-control" placeholder="Enter Movie Release Date">
     </div>
     <br/>
     <button type="submit" class="btn btn-primary">Submit</button>
