@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace RazorPagesMovie.Models
 {
@@ -11,6 +12,7 @@ namespace RazorPagesMovie.Models
         public string Title { get; set; } = string.Empty;
 
         [DataType(DataType.Date)]
+        [DisplayName(displayName: "Release Date")]
         public DateTime ReleaseDate { get; set; }
 
         [DataType(DataType.Text)]
