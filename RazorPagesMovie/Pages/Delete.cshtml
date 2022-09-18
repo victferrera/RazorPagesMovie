@@ -1,0 +1,19 @@
+﻿@page
+@model RazorPagesMovie.Pages.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1><b>You are sure to delete this movie?</b></h1>
+
+<div class="card">
+    <form method="post">
+    <div class="card-body">
+        <p><b>@Html.DisplayNameFor(m => m.Movie.Title)</b>: @Model.Movie.Title</p><br />
+        <p><b>@Html.DisplayNameFor(m => m.Movie.Genre)</b>: @Model.Movie.Genre</p><br />
+        <p><b>@Html.DisplayNameFor(m => m.Movie.Price)</b>: @Model.Movie.Price</p><br />
+        <p><b>@Html.DisplayNameFor(m => m.Movie.ReleaseDate)</b>: @Model.Movie.ReleaseDate</p><br />
+        <button type="submit" class="btn btn-primary">Delete</button>
+    </div>
+    </form>
+</div>
