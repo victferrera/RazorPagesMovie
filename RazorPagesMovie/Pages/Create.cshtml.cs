@@ -28,7 +28,8 @@ namespace RazorPagesMovie.Pages
 
             movie.CurrentValues.SetValues(Movie);
             await _context.SaveChangesAsync();
-            return Redirect("Create");
+
+            return Redirect("/Home");
         }
     }
 }

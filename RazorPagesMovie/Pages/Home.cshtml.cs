@@ -10,13 +10,15 @@ namespace RazorPagesMovie.Pages
     {
         public RazorPageMovieContext _context;
 
+        [BindProperty]
+        public List<Movie> Movies { get; set; }
+
+
         public HomeModel(RazorPageMovieContext context)
         {
             _context = context;
         }
 
-        [BindProperty]
-        public List<Movie> Movies { get; set; }
         public async Task<IActionResult> OnGetAsync()
         {
             Movies = await _context.Movie.ToListAsync();
