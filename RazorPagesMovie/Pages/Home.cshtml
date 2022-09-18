@@ -29,11 +29,14 @@
                 <td>@movie.Title</td>
                 <td>@movie.Genre</td>
                 <td>@movie.Price</td>
-                <td>@movie.ReleaseDate</td>
+                <td>@movie.ReleaseDate.ToString("dd/MM/yyyy")</td>
                 <td>
-                    <button class="btn btn-primary">
+                    <a class="btn btn-warning" href="Update?id=@movie.ID">
                         <i class="fa fa-pen"></i>
-                    </button>
+                    </a>
+                    <a class="btn btn-danger" href="Delete?id=@movie.ID">
+                        <i class="fa fa-trash"></i>
+                    </a>
                 </td>
             </tr>
         }
